@@ -21,6 +21,7 @@ Page({
       title: '加载中...',
     });
     util.request(api.CatalogList).then(function (res) {
+      console.log(res)
         that.setData({
           navList: res.data.categoryList,
           currentCategory: res.data.currentCategory

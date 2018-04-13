@@ -241,6 +241,7 @@ Page({
     let that = this;
     let regionType = that.data.regionType;
     util.request(api.RegionList, { parentId: regionId }).then(function (res) {
+      console.log(res)
       if (res.errno === 0) {
         that.setData({
           regionList: res.data.map(item => {
